@@ -1,0 +1,616 @@
+/* ========================
+   Estilos Globais
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MinhaFonte";
+  src: url("fonts/Namaku.otf") format("opentype"),
+    url("fonts/.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ========================
+   Header
+======================== */
+header {
+  background: url("img/fundo-banner7.png") center/cover no-repeat;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  max-width: 100px; 
+  height: auto; 
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #e79090 !important;
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #e79090 !important;
+  padding: 5px 10px; 
+  border: 2px solid transparent; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; 
+}
+
+.nav-link:hover {
+  background-color: #fff; 
+  border-color: #e79090;
+}
+
+.navbar-nav-left,
+.navbar-nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item .btn {
+  background-color: #ff7043;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+/* ========================
+   Hero Section
+======================== */
+.hero {
+  background: url("img/fundo-banner7.png") center/cover no-repeat;
+  position: relative;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4c2b1e;
+}
+
+.hero h1 {
+  font-family: "MinhaFonte";
+  font-size: 3rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #7d414d;
+  font-size: 80px;
+  font-weight: bold;
+  color: #e3b3bf;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero img {
+  width: 500px;
+  transform: scale(1.25);
+  animation: balanco 5s linear infinite;
+
+  margin: 20px 0;
+}
+
+@keyframes balanco {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* Estilo do botão na seção hero */
+.hero .btn-primary {
+  background: linear-gradient(45deg, #e3b3bf, #7d414d); 
+  border: none; 
+  color: white; 
+  padding: 12px 30px; 
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  border-radius: 30px; 
+  text-transform: uppercase; 
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  animation: pulse 1.5s infinite; 
+}
+
+/* Efeito de pulsação */
+@keyframes pulse {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.1); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+/* Efeito de hover */
+.hero .btn-primary:hover {
+  background: linear-gradient(
+    45deg,
+    #e87995,
+    #e62e53
+  ); 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Efeito de foco no botão */
+.hero .btn-primary:focus {
+  outline: none; 
+  box-shadow: 0 0 0 4px rgba(255, 87, 51, 0.6); 
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero img {
+    width: 250px;
+  }
+}
+
+/* ========================
+   Sobre
+======================== */
+
+/* Container da imagem de fundo */
+#sobre {
+  height: 75vh;
+  position: relative;
+  background-image: url("img/torta-chocodoce-chocolate.png");
+  background-size: cover; 
+  background-position: center;
+  color: #f1e4c5;
+  padding: 5rem 0; /
+}
+
+#sobre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.1); 
+  z-index: 1; /
+}
+
+#sobre .container {
+  position: relative;
+  z-index: 2;
+}
+
+#sobre h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #7d414d;
+  font-weight: bold;
+  color: #fff;
+}
+
+#sobre p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 200;
+}
+
+/* Estilo para o texto dentro do container */
+#sobre .container {
+  position: relative;
+  z-index: 2; 
+}
+
+.image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#sobre .col-md-6 img {
+  width: 80%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+
+.image-container img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  #sobre {
+    height: auto; 
+  }
+  .image-container {
+    justify-content: center; 
+    align-items: center;
+  }
+  .image-container img {
+    width: 80%; 
+  }
+  #sobre p {
+    font-size: 1rem; /
+  }
+}
+
+/* ========================
+   Serviços
+======================== */
+#servicos {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#servicos h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #7d414d;
+  font-weight: bold;
+  color: #e3b3bf;
+}
+
+#servicos h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #e62e53;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 18rem;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #servicos .row .col-md-6 {
+    flex: 0 0 100%;
+  }
+  #servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  }
+
+  #servicos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  .card {
+    width: 100%; 
+    max-width: 300px;
+    margin: 10px auto; 
+  }
+
+  .card img {
+    height: auto; 
+  }
+}
+
+/* ========================
+   Estilos para Depoimentos
+======================== */
+
+#depoimentos {
+  background: url("img/fundo-banner7.png") center/cover no-repeat;
+  height: 50vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#depoimentos h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #7d414d;
+  font-weight: bold;
+  color: #e3b3bf;
+}
+
+/* Estilo para as imagens no carrossel */
+.carousel-inner img {
+  width: 750px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid #d30a32;
+  margin: 0 auto;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  border-color: #f56a6a; /* Muda a cor da borda */
+  transform: scale(1.02); /* Leve aumento para destaque */
+}
+
+
+/* Botões de controle */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(50%);
+  width: 30px;
+  height: 30px;
+  
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.8;
+  
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #depoimentos h1 {
+    height: auto; 
+   
+    font-size: 2rem;
+  }
+  .carousel-inner img {
+    width: 100%; 
+    height: auto; 
+    border: 1px solid #d30a32;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px; 
+    height: 40px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
+
+  .carousel-control-prev {
+    left: -30px; 
+  }
+
+  .carousel-control-next {
+    right: -30px; 
+  }
+
+}
+
+/* ========================
+   Estilos para Contato
+======================== */
+.contact-section {
+  height: 75vh;
+  background: url("img/back.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 0;
+  
+}
+
+.contact-section h2{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #7d414d;
+  font-weight: bold;
+  color:#e3b3bf;
+}
+.contact-section h1 {
+  font-weight: bold;
+  color: #d30a32;
+}
+
+.contact-item {
+  background-color: #e79090;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.contact-item .icon {
+  font-size: 2.5rem;
+  color: #d30a32;
+}
+
+.contact-item h5 {
+  font-size: 1.2rem;
+  color: #d30a32;
+  margin-top: 1rem;
+}
+
+.contact-item p,
+.contact-item a {
+  font-size: 1rem;
+  color: #d30a32;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #fff;
+}
+
+/* Redes Sociais */
+.social-icons a {
+  font-size: 2rem;
+  color: #e79090;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d30a32;
+  transform: scale(1.2);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .contact-section {
+    height: auto; 
+  }
+  .contact-item {
+    padding: 1rem;
+  }
+
+  .contact-section h2,
+  .contact-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========================
+   Botão WhatsApp
+======================== */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  color: darkgreen;
+}
+
+.btn-whatsapp i {
+  font-size: 20px;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  background: url("img/fundo-banner7.png") center/cover no-repeat;
+  font-family: "Popins", sans-serif;
+  color: #d30a32;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
+
+/* ========================
+   BUTTON para cima
+======================== */
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 20px;
+  z-index: 1000;
+  background-color: #e3b3bf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #e62e53;
+}
